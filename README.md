@@ -15,7 +15,7 @@ This repository contains MATLAB implementations of fundamental **Digital Signal 
 | 7    | DownSampling_freq.m            | Demonstrates downsampling in frequency domain.                          |
 | 8    | DownSampling_time.m            | Demonstrates downsampling in time domain.                               |
 | 9    | FFT_16pt.m                     | Computes and plots a 16-point FFT of a signal.                          |
-| 10   | HighPass_Chebyshev_IIR.m       | Designs a high-pass Chebyshev Type-I IIR filter.                        |
+| 10   | HighPass_Chebyshev_IIR.m       | Designs a high-pass Chebyshev Type-I and Type-II IIR filter.                        |
 | 11   | HighPass_butterworth_IIR.m     | Designs a high-pass Butterworth IIR filter.                             |
 | 12   | LowPass_FIR.m                  | Designs a low-pass FIR filter using windowing method.                   |
 | 13   | UpSampling_time.m              | Demonstrates upsampling in time domain.                                 |
