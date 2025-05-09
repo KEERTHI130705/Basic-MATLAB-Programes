@@ -1,21 +1,25 @@
 # DSP MATLAB Scripts Repository
 
-This repository contains a collection of MATLAB scripts implementing fundamental concepts of **Digital Signal Processing (DSP)**. Each script demonstrates a specific operation or transformation commonly used in signal processing theory and applications.
+This repository contains MATLAB implementations of fundamental **Digital Signal Processing (DSP)** operations, including modulation, Fourier analysis, correlation, filtering, waveform generation, and time/frequency domain sampling techniques.
+
+---
 
 ## Repository Structure
 
-| Filename                 | Description                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| `AmplitudeModulation.m`  | Performs Amplitude Modulation (AM) on an input signal.                     |
-| `AutoCorrelation.m`      | Computes the autocorrelation of a discrete-time signal.                    |
-| `Correlation.m`          | General correlation script for signal similarity analysis.                 |
-| `CrossCorrelation.m`     | Computes the cross-correlation between two discrete signals.               |
-| `DFT.m`                  | Computes the Discrete Fourier Transform (DFT) of a signal.                 |
-| `DSB_SC.m`               | Implements Double Sideband Suppressed Carrier (DSB-SC) modulation.         |
-| `DownSampling.m`         | Demonstrates the downsampling operation on a discrete signal.              |
-| `FFT_16pt.m`             | Performs a 16-point Fast Fourier Transform using Radix-2 DIT algorithm.    |
-| `HighPass_FIR.m`         | Designs and applies a High-Pass FIR filter.                                |
-| `LowPass_FIR.m`          | Designs and applies a Low-Pass FIR filter.                                 |
-| `UpSampling.m`           | Demonstrates the upsampling operation on a discrete signal.                |
-| `VSB.m`                  | Implements Vestigial Sideband (VSB) modulation.                            |
-| `Waveform Generator.m`   | Generates basic waveforms (sine, square, triangular, etc.).                |
+| Filename                    | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| `AmplitudeModulation.m`     | Performs Amplitude Modulation (AM) on a signal.                            |
+| `AutoCorrelation.m`         | Computes the autocorrelation of a discrete-time signal.                    |
+| `Correlation.m`             | Performs general correlation on signals to measure similarity.             |
+| `CrossCorrelation.m`        | Computes the cross-correlation between two signals.                        |
+| `DFT.m`                     | Computes the Discrete Fourier Transform manually (without `fft`).          |
+| `DSB_SC.m`                  | Implements Double Sideband Suppressed Carrier modulation.                  |
+| `DownSampling_time.m`       | Demonstrates downsampling in the time domain.                              |
+| `DownSampling_freq.m`       | Demonstrates downsampling effects in the frequency domain.                 |
+| `FFT_16pt.m`                | Performs a 16-point FFT using Radix-2 Decimation-In-Time (DIT) algorithm. |
+| `HighPass_FIR.m`            | Designs and applies a high-pass FIR filter.                               |
+| `LowPass_FIR.m`             | Designs and applies a low-pass FIR filter.                                |
+| `UpSampling_time.m`         | Demonstrates upsampling in the time domain.                                |
+| `UpsSampling_freq.m`        | Demonstrates upsampling effects in the frequency domain.                   |
+| `VSB.m`                     | Implements Vestigial Sideband (VSB) modulation.                            |
+| `Waveform Generator.m`      | Generates basic waveforms like sine, square, and triangular.  
