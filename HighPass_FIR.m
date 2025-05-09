@@ -60,4 +60,3 @@ title('HPF User defined')
 
 error = norm(h1 - h2);
 disp(['Error between inbuilt and user-defined filter: ', num2str(error)]);
-save('HPF_fir.mat','h2')
