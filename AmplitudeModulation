@@ -1,0 +1,50 @@
+clc; clear; close all;
+
+msg_freq = input('Enter message signal frequency (Hz): ');
+car_freq = input('Enter carrier signal frequency (Hz): ');
+msg_amp = input('Enter message signal amplitude: ');
+car_amp = input('Enter carrier signal amplitude: ');
+
+mod_index = msg_amp / car_amp;         % Modulation index (u)
+fs = 20 * car_freq;                    % Sampling frequency (at least 2x carrier)
+t_end = 100 / car_freq;                % Time duration: 100 carrier cycles
+t = 0 : 1/fs : t_end;                  % Time vector
+
+message = msg_amp * cos(2*pi*msg_freq*t);                      % Message signal
+carrier = car_amp * cos(2*pi*car_freq*t);                      % Carrier signal
+am_signal = car_amp * (1 + mod_index * cos(2*pi*msg_freq*t)) .* cos(2*pi*car_freq*t); % AM signal
+
+N = length(am_signal);                 
+AM_FFT = fft(am_signal, N);            % FFT of AM signal
+AM_FFT_shifted = fftshift(AM_FFT);     % Shift DC to center
+AM_spectrum = abs(AM_FFT_shifted) / N; % Normalize
+f_axis = linspace(-fs/2, fs/2, N);     % Frequency axis
+
+subplot(411);
+plot(t, message);
+title('Message Signal');
+xlabel('Time (s)'); ylabel('Amplitude');
+
+subplot(412);
+plot(t, carrier);
+title('Carrier Signal');
+xlabel('Time (s)'); ylabel('Amplitude');
+
+subplot(4,1,3);
+plot(t, am_signal);
+title('AM Signal (Modulated)');
+xlabel('Time (s)'); ylabel('Amplitude');
+
+subplot(4,1,4);
+plot(f_axis, AM_spectrum);
+title('Spectrum of AM Signal');
+xlabel('Frequency (Hz)'); ylabel('Magnitude');
+
+%--- Modulation Type Display ---
+if mod_index < 1
+    disp('Undermodulated Signal (u < 1)');
+elseif mod_index == 1
+    disp('Critically Modulated Signal (u = 1)');
+else
+    disp('Overmodulated Signal (u > 1)');
+end
