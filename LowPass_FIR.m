@@ -1,4 +1,4 @@
-function h = myfir2(N, wc,ftype,window_type)
+function h = myfir(N, wc,ftype,window_type)
     n = 0:N;
     a=N/2;
     switch lower(ftype)
@@ -50,7 +50,7 @@ plot(w,20*log10(H_magnorm1))
 title('LPF Inbuilt')
 
 
-h2=myfir2(N,wc,'low',haMMing');
+h2=myfir(N,wc,'low',haMMing');
 [H2,w]=freqz(h2,1);
 H_mag2=abs(H2);
 H_magnorm2=H_mag2/max(H_mag2);
