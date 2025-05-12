@@ -1,24 +1,36 @@
-# DSP MATLAB Scripts Repository
+# Signal Processing & Modulation Techniques in MATLAB
 
-This repository contains MATLAB implementations of fundamental **Digital Signal Processing (DSP)** operations, including modulation, Fourier analysis, correlation, filtering, waveform generation, and time/frequency domain sampling techniques.
+This repository contains a collection of MATLAB scripts implementing various **Digital Signal Processing (DSP)** techniques and **Modulation Schemes**. Each file demonstrates a specific concept through simulation and analysis. Perfect for ECE coursework, projects, and building strong fundamentals.
 
-## File List
+---
 
-| S.No | File Name                      | Description                                                             |
-|------|--------------------------------|-------------------------------------------------------------------------|
-| 1    | AmplitudeModulation.m          | Simulates amplitude modulation and plots time and frequency responses.  |
-| 2    | AutoCorrelation.m              | Computes and plots the auto-correlation of a signal.                    |
-| 3    | Correlation.m                  | User-defined function to compute auto or cross correlation.             |
-| 4    | CrossCorrelation.m             | Computes and displays cross-correlation between two signals.            |
-| 5    | DFT.m                          | Computes the Discrete Fourier Transform manually (without using fft).   |
-| 6    | DSB_SC.m                       | Generates a Double Side Band Suppressed Carrier signal.                 |
-| 7    | DownSampling_freq.m            | Demonstrates downsampling in frequency domain.                          |
-| 8    | DownSampling_time.m            | Demonstrates downsampling in time domain.                               |
-| 9    | FFT_16pt.m                     | Computes and plots a 16-point FFT of a signal.                          |
-| 10   | HighPass_Chebyshev_IIR.m       | Designs a high-pass Chebyshev Type-I and Type-II IIR filter.                        |
-| 11   | HighPass_butterworth_IIR.m     | Designs a high-pass Butterworth IIR filter.                             |
-| 12   | LowPass_FIR.m                  | Designs a low-pass FIR filter using windowing method.                   |
-| 13   | UpSampling_time.m              | Demonstrates upsampling in time domain.                                 |
-| 14   | UpsSampling_freq.m             | Demonstrates upsampling and its effect in frequency domain.             |
-| 15   | VSB.m                          | Simulates Vestigial Side Band modulation.                               |
-| 16   | Waveform Generator.m           | Generates different waveforms like sine, square, and sawtooth.          |
+## 📁 File List with Serial Numbers
+
+### 🔊 Modulation Techniques
+1. `1. ASK_Modulation.m` - Amplitude Shift Keying modulation
+2. `2. FSK_Modulation.m` - Frequency Shift Keying modulation
+3. `3. PSK_Modulation.m` - Phase Shift Keying modulation
+4. `4. AmplitudeModulation.m` - Standard Amplitude Modulation
+5. `5. DSB_SC.m` - Double Sideband Suppressed Carrier modulation
+6. `6. VSB.m` - Vestigial Sideband modulation
+
+### 🔎 Correlation & Transformations
+7. `7. AutoCorrelation.m` - Autocorrelation of signals
+8. `8. Correlation.m` - General correlation analysis
+9. `9. CrossCorrelation.m` - Cross-correlation between signals
+10. `10. DFT.m` - Discrete Fourier Transform
+11. `11. FFT_16pt.m` - 16-point Fast Fourier Transform
+
+### ⏱️ Sampling Operations
+12. `12. DownSampling_time.m` - Downsampling in time domain
+13. `13. DownSampling_freq.m` - Downsampling in frequency domain
+14. `14. UpSampling_time.m` - Upsampling in time domain
+15. `15. UpsSampling_freq.m` - Upsampling in frequency domain
+
+### 🎚️ Filter Designs
+16. `16. LowPass_FIR.m` - FIR low-pass filter design
+17. `17. HighPass_butterworth_IIR.m` - High-pass Butterworth IIR filter
+18. `18. HighPass_Chebyshev_IIR.m` - High-pass Chebyshev IIR filter
+
+### 🧰 Utilities
+19. `19. Waveform Generator.m` - Generate sine, square, and triangular waveforms
